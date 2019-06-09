@@ -57,4 +57,5 @@ class Solution {
         String result = solution.smallestSubsequence("ecbacba");
         System.out.println(result);
     }
+    
 }
