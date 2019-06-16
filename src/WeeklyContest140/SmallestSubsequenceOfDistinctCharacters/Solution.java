@@ -1,7 +1,6 @@
 package WeeklyContest140.SmallestSubsequenceOfDistinctCharacters;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -42,7 +41,7 @@ class Solution {
         return result.toString();
     }
 
-    class DistinctChar{
+    public class DistinctChar{
         String ch;
         boolean repeat;
 
@@ -57,5 +56,5 @@ class Solution {
         String result = solution.smallestSubsequence("ecbacba");
         System.out.println(result);
     }
-    
+
 }
