@@ -1,23 +1,37 @@
 package RemoveAllAdjacentDuplicatesInString;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 class Solution {
     public String removeDuplicates(String S) {
-        StringBuilder sb = new StringBuilder(S);
+        StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < sb.length(); ) {
-            if (i + 1 < sb.length() && i >= 0 && sb.charAt(i) == sb.charAt(i + 1)) {
-                sb.deleteCharAt(i + 1);
-                sb.deleteCharAt(i);
+        List<Character> sList = new ArrayList<>();
+
+        for (int i = 0; i < S.length(); i++) {
+            sList.add(S.charAt(i));
+        }
+
+        for (int i = 0; i < sList.size(); ) {
+            if (i + 1 < sList.size() && i >= 0 && sList.get(i) == sList.get(i + 1)) {
+                sList.remove(i + 1);
+                sList.remove(i);
                 i--;
             } else {
                 i++;
             }
         }
 
+        for (int i = 0; i < sList.size(); i++) {
+            sb.append(sList.get(i));
+        }
+
         return sb.toString();
     }
 
     public static void main(String[] args) {
-        System.out.println(new Solution().removeDuplicates("aaabbb"));
+        System.out.println(new Solution().removeDuplicates("aaabb"));
     }
 }
