@@ -1,6 +1,6 @@
 package HouseRobber;
 
-class Solution {
+class SolutionWithoutArray {
 //    public int rob(int[] nums) {
 //        if (nums.length == 0) return 0;
 //
@@ -22,26 +22,21 @@ class Solution {
 //    }
 
     public int rob(int[] nums) {
-        if (nums.length == 0) return 0;
-
-        int result = 0;
-
-        int[] dp = new int[nums.length + 3];
-
-        for (int i = 0; i < nums.length; i++) {
-            dp[i + 3] = Math.max(nums[i] + dp[i],nums[i] + dp[i + 1]);
-            if (dp[i + 3] > result) {
-                result = dp[i + 3];
-            }
+        int prev = 0, curr = 0;
+        for (int n : nums) {
+            int temp = curr;
+            //if rob this house, then use prev+n, prev
+            //if don't rob this house, then current will keep the previous amount
+            curr = Math.max(prev + n, curr);
+            prev = temp;
         }
-
-        return result;
+        return curr;
     }
 
     public static void main(String[] args) {
 //        int[] input =  {2,7,9,3,1};
 //        int[] input =  {1,1};
         int[] input = {2,1,1,2};
-        System.out.println(new Solution().rob(input));
+        System.out.println(new SolutionWithoutArray().rob(input));
     }
 }
