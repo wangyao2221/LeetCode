@@ -1,36 +1,39 @@
 package RangeSumQueryImmutable;
 
 class NumArray {
-    private int[][] dp;
+    private int[] dp;
 
     public NumArray(int[] nums) {
         if (nums.length == 0) return;
 
-        dp = new int[nums.length][nums.length];
-
-        dp[0][0] = nums[0];
-
-        for (int i = 1; i < nums.length; i++) {
-            dp[0][i] = dp[0][i - 1] + nums[i];
-        }
+        dp = new int[nums.length + 1];
+        dp[0] = 0;
 
         for (int i = 1; i < nums.length; i++) {
-            for (int j = i; j < nums.length; j++) {
-                dp[i][j] = dp[i - 1][j] - nums[i - 1];
-            }
+            dp[i] = dp[i - 1] + nums[i - 1];
         }
-
-//        for (int i = 0; i < dp.length; i++) {
-//            for (int j = 0; j < dp.length; j++) {
-//                System.out.print(dp[i][j] + "\t");
-//            }
-//            System.out.println();
-//        }
     }
-    
+
     public int sumRange(int i, int j) {
-        return dp[i][j];
+        if (dp.length == 0) return 0;
+        return dp[j + 1] - dp[i];
     }
+
+//    public NumArray(int[] nums) {
+//        if (nums.length == 0) return;
+//
+//        dp = new int[nums.length];
+//        dp[0] = nums[0];
+//
+//        for (int i = 1; i < nums.length; i++) {
+//            dp[i] = dp[i - 1] + nums[i];
+//        }
+//    }
+//
+//    public int sumRange(int i, int j) {
+//        if (dp.length == 0) return 0;
+//        return i == 0 ? dp[j] : dp[j] - dp[i - 1];
+//    }
 
     public static void main(String[] args) {
         int[] input = {-2, 0, 3, -5, 2, -1};
