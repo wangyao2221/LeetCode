@@ -1,4 +1,4 @@
-package LongestPalindrome;
+package LongestPalindromeSubstring;
 
 /**
   * 注意的问题：

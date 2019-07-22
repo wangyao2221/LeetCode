@@ -5,7 +5,7 @@ class Solution {
     // 5 1 1
     // 1 1
     public boolean divisorGame(int N) {
-        return N % 2 == 0 ? true: false;
+        return N % 2 == 0;
     }
 
     public static void main(String[] args) {
