@@ -29,7 +29,7 @@ class Solution {
 
         while (!stack.isEmpty()) {
             TreeNodeWithDept node = stack.pop();
-            
+
         }
 
         return null;
