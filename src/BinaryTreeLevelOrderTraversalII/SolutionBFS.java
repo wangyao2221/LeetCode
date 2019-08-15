@@ -1,9 +1,8 @@
 package BinaryTreeLevelOrderTraversalII;
 
-import java.security.Key;
 import java.util.*;
 
-class Solution {
+class SolutionBFS {
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
         List<List<Integer>> result = new LinkedList<>();
         Queue<TreeNodeWithDept> queue = new LinkedList<>();

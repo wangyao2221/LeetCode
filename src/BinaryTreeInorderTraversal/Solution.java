@@ -11,16 +11,20 @@ class Solution {
         Stack<TreeNode> stack = new Stack<>();
 
         TreeNode node = root;
-        stack.push(node);
 
-        while (!stack.empty()) {
-            if (node == null) {
-                result.add(node.val);
-                stack.push(node.right);
+        do {
+            stack.push(node);
+
+            if (node != null) {
+                node = node.left;
             } else {
-                stack.push(node.left);
+                stack.pop();
+                TreeNode tmp = stack.peek();
+                result.add(tmp.val);
+                stack.push(node.right);
+                node = node.right;
             }
-        }
+        } while (!stack.empty());
 
         return result;
     }
