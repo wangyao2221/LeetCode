@@ -1,4 +1,4 @@
-package Test.iQiYi;
+package iQiYiInterview;
 
 public class Singleton {
     private static Singleton singleton;
