@@ -1,6 +1,7 @@
 package Test;
 
 public class BinarySearch {
+
     public int binarySearch(int[] arr, int x) {
         int low = 0, high = arr.length - 1;
         int mid = (low + high) / 2;
@@ -19,6 +20,7 @@ public class BinarySearch {
 
         return -1;
     }
+
 
     public static void main(String[] args) {
         System.out.println(new BinarySearch().binarySearch(new int[]{1,2,3,4}, 4));
