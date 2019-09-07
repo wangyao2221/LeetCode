@@ -1,5 +1,7 @@
 package BinaryTreeLevelOrderTraversalII;
 
+import common.TreeNode;
+
 import java.security.Key;
 import java.util.*;
 
@@ -59,12 +61,5 @@ class Solution {
             this.node = node;
             this.dept = dept;
         }
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
     }
 }

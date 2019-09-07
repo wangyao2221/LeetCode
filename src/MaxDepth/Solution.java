@@ -1,14 +1,6 @@
 package MaxDepth;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
+import common.TreeNode;
 
 class Solution {
     public int maxDepth(TreeNode root) {

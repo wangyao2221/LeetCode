@@ -1,5 +1,7 @@
 package WeeklyContest144.DeleteNodesAndReturnForest;
 
+import common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -101,39 +103,29 @@ class Solution {
         return false;
     }
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
-
     public static void main(String[] args) {
 //        System.out.println(Arrays.binarySearch(new int[]{3, 5}, 0, 2, 1));
         Solution solution = new Solution();
 
         int[] input = {1, 2, 3, 4, 5, 6, 7};
 
-//        TreeNode treeNode = solution.new TreeNode(1);
-//        treeNode.left = solution.new TreeNode(2);
-//        treeNode.right = solution.new TreeNode(3);
+//        TreeNode treeNode = new TreeNode(1);
+//        treeNode.left = new TreeNode(2);
+//        treeNode.right = new TreeNode(3);
 //
-//        treeNode.left.left = solution.new TreeNode(4);
-//        treeNode.left.right = solution.new TreeNode(5);
-//        treeNode.right.left = solution.new TreeNode(6);
-//        treeNode.right.right = solution.new TreeNode(7);
+//        treeNode.left.left = new TreeNode(4);
+//        treeNode.left.right = new TreeNode(5);
+//        treeNode.right.left = new TreeNode(6);
+//        treeNode.right.right = new TreeNode(7);
 
-        TreeNode treeNode = solution.new TreeNode(1);
-        treeNode.left = solution.new TreeNode(2);
-        treeNode.right = solution.new TreeNode(3);
+        TreeNode treeNode = new TreeNode(1);
+        treeNode.left = new TreeNode(2);
+        treeNode.right = new TreeNode(3);
 
         treeNode.left.left = null;
         treeNode.left.right = null;
         treeNode.right.left = null;
-        treeNode.right.right = solution.new TreeNode(4);
+        treeNode.right.right = new TreeNode(4);
 
 //        System.out.println(solution.delNodes(treeNode,new int[]{3,5}));
         System.out.println(solution.delNodes(treeNode, new int[]{2, 1}));

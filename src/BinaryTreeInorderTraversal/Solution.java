@@ -1,6 +1,8 @@
 package BinaryTreeInorderTraversal;
 
 
+import common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -27,13 +29,5 @@ class Solution {
         } while (!stack.empty());
 
         return result;
-    }
-
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
     }
 }

@@ -1,7 +1,7 @@
 package WeeklyContest148.BinaryTreeColoringGame;
 
 
-
+import common.TreeNode;
 
 class Solution {
     public boolean btreeGameWinningMove(TreeNode root, int n, int x) {
@@ -22,15 +22,5 @@ class Solution {
         }
 
         return find(root.left, x) || find(root.right, x);
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 }

@@ -1,5 +1,7 @@
 package BinaryTreeZigzagLevelOrderTraversal;
 
+import common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -15,16 +17,6 @@ import java.util.Queue;
  * }
  */
 class Solution {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        public TreeNode(int val) {
-            this.val = val;
-        }
-    }
-
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
 
@@ -71,11 +63,11 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new Solution().new TreeNode(3);
-        root.left = new Solution().new TreeNode(9);
-        root.right = new Solution().new TreeNode(20);
-        root.right.left = new Solution().new TreeNode(15);
-        root.right.right = new Solution().new TreeNode(7);
+        TreeNode root = new TreeNode(3);
+        root.left = new TreeNode(9);
+        root.right = new TreeNode(20);
+        root.right.left = new TreeNode(15);
+        root.right.right = new TreeNode(7);
 
         List<List<Integer>> result = new Solution().zigzagLevelOrder(root);
 

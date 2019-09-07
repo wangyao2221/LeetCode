@@ -1,5 +1,7 @@
 package WeeklyContest140.InsufficientNodesInRootToLeafPaths;
 
+import common.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -14,13 +16,4 @@ class Solution {
         return null;
     }
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 }

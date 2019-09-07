@@ -1,5 +1,7 @@
 package BinaryTreeLevelOrderTraversalII;
 
+import common.TreeNode;
+
 import java.util.*;
 
 class SolutionBFS {
@@ -58,12 +60,5 @@ class SolutionBFS {
             this.node = node;
             this.dept = dept;
         }
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
     }
 }

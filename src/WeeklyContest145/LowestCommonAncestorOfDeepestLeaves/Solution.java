@@ -1,5 +1,7 @@
 package WeeklyContest145.LowestCommonAncestorOfDeepestLeaves;
 
+import common.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -37,14 +39,5 @@ class Solution {
         return left > right ? left + 1 : right + 1;
     }
 
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
-    }
 }
 

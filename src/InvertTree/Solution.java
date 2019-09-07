@@ -1,14 +1,6 @@
 package InvertTree;
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int x) {
-        val = x;
-    }
-}
+import common.TreeNode;
 
 class Solution {
     public TreeNode invertTree(TreeNode root) {

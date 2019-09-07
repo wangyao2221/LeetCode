@@ -1,6 +1,8 @@
 package BinaryTreeInorderTraversal;
 
 
+import common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,12 +19,5 @@ class SolutionRecur {
         inorder(root.left);
         result.add(root.val);
         inorder(root.right);
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode(int x) { val = x; }
     }
 }

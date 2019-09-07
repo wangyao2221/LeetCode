@@ -1,21 +1,13 @@
 package iQiYiInterview;
 
+import common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
 public class Test1 {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        public TreeNode(int val) {
-            this.val = val;
-        }
-    }
-
     public static void print(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
 
