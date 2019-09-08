@@ -8,6 +8,12 @@ class Solution {
             distanceSum += distance[i];
         }
 
+        if (start > destination) {
+            int tmp = start;
+            start = destination;
+            destination = tmp;
+        }
+
         int distance1 = 0;
         int distance2 = 0;
 
@@ -21,7 +27,10 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        int[] distance = {1,2,3,4};
-        System.out.println(new Solution().distanceBetweenBusStops(distance,0,3));
+//        int[] distance = {1,2,3,4};
+//        System.out.println(new Solution().distanceBetweenBusStops(distance,0,3));
+
+        int[] distance = {7,10,1,12,11,14,5,0};
+        System.out.println(new Solution().distanceBetweenBusStops(distance,7,2));
     }
 }
