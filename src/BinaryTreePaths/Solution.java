@@ -6,6 +6,7 @@ import common.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
+// TODO 优化
 class Solution {
     public List<String> binaryTreePaths(TreeNode root) {
         if (root == null) {
