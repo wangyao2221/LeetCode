@@ -8,4 +8,8 @@
 # insert into Scores (Id, Score) values ('6', '3.65');
 # Write your MySQL query statement below
 
-SELECT a.Score,COUNT(distinct b.Score) AS Rank FROM scores AS a JOIN scores b ON a.Score >= b.Score ORDER BY a.Score
+# SELECT a.Score,COUNT(distinct b.Score) AS Rank FROM scores AS a JOIN scores b ON a.Score >= b.Score ORDER BY a.Score
+
+# SELECT * FROM scores AS a LEFT JOIN (SELECT Score FROM scores GROUP BY Score ORDER BY Score DESC) AS b ON a.Score = b.Score ORDER BY a.Score DESC
+
+SELECT COUNT(a.Score),a.Score FROM scores AS a
