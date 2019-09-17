@@ -12,4 +12,14 @@
 
 # SELECT * FROM scores AS a LEFT JOIN (SELECT Score FROM scores GROUP BY Score ORDER BY Score DESC) AS b ON a.Score = b.Score ORDER BY a.Score DESC
 
-SELECT COUNT(a.Score),a.Score FROM scores AS a
+SELECT e.Score,d.Rank FROM scores e,
+(
+    SELECT c.s1,COUNT(*) AS Rank FROM
+      (
+          SELECT DISTINCT a.Score AS s1,b.Score AS s2
+            FROM scores AS a JOIN scores AS b
+          ON a.Score <= b.Score ORDER BY a.Score DESC
+      )
+    AS c GROUP BY c.s1 ORDER BY c.s1 DESC
+)
+AS d WHERE e.Score = d.s1 ORDER BY e.Score DESC
