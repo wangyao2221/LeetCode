@@ -12,6 +12,7 @@
 
 # SELECT * FROM scores AS a LEFT JOIN (SELECT Score FROM scores GROUP BY Score ORDER BY Score DESC) AS b ON a.Score = b.Score ORDER BY a.Score DESC
 
+# TODO
 SELECT e.Score,d.Rank FROM scores e,
 (
     SELECT c.s1,COUNT(*) AS Rank FROM

@@ -1,5 +1,7 @@
 package Test;
 
+import java.util.Stack;
+
 public class ArrayTest {
     public static void main(String[] args) {
 //        int[] arr = new int[5];
@@ -10,6 +12,7 @@ public class ArrayTest {
 //
 //        System.out.println(System.identityHashCode(arr));
 //        System.out.println(System.identityHashCode(arr[0]));
+
         int n = Integer.MAX_VALUE;
         System.out.println(n + 1);
         long m = (long) Math.pow(2,31);
