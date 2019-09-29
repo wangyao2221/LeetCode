@@ -16,10 +16,10 @@ import common.TreeNode;
  */
 class Solution {
     public TreeNode sortedArrayToBST(int[] nums) {
-        return recur(nums, 0, nums.length - 1);
+        return recurse(nums, 0, nums.length - 1);
     }
 
-    public TreeNode recur(int[] nums, int i, int j) {
+    public TreeNode recurse(int[] nums, int i, int j) {
         if (i > j) return null;
         if (i == j) return new TreeNode(nums[i]);
 
@@ -29,8 +29,8 @@ class Solution {
         }
 
         TreeNode treeNode = new TreeNode(nums[mid]);
-        treeNode.left = recur(nums, i, mid - 1);
-        treeNode.right = recur(nums, mid + 1, j);
+        treeNode.left = recurse(nums, i, mid - 1);
+        treeNode.right = recurse(nums, mid + 1, j);
 
         return treeNode;
     }
