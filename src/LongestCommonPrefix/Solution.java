@@ -2,9 +2,7 @@ package LongestCommonPrefix;
 
 class Solution {
     public String longestCommonPrefix(String[] strs) {
-        if (strs.length == 0) {
-            return "";
-        }
+        if (strs.length == 0) return "";
 
         int minLen = Integer.MAX_VALUE;
 
@@ -25,9 +23,7 @@ class Solution {
                 }
             }
 
-            if (flag == 1) {
-                break;
-            }
+            if (flag == 1) break;
 
             longestCommonLen++;
         }
