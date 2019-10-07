@@ -7,24 +7,45 @@ import java.util.Queue;
 
 class Solution {
     public boolean isBalanced(TreeNode root) {
-        boolean result = false;
+        if (root == null) {
+            return true;
+        }
+
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
-        int curLevelNodeNum = 1;
-        int expectNextLevelNodeNum = curLevelNodeNum;
+        int currentLevelNodeNum = 1;
+        int expectCurrentLevelNodeNum = currentLevelNodeNum;
+
+        int flag = 0;
         while (!queue.isEmpty()) {
+            if (currentLevelNodeNum < expectCurrentLevelNodeNum && flag < 2) {
+                flag++;
+            }
+
+            if (flag == 2) {
+                return false;
+            }
+
             int tmp = 0;
-            for (int i = 0; i < curLevelNodeNum; i++) {
+            for (int i = 0; i < currentLevelNodeNum; i++) {
                 if (!queue.isEmpty()) {
-                    tmp++;
+                    TreeNode node = queue.poll();
+                    if (node.left != null) {
+                        queue.add(node.left);
+                        tmp++;
+                    }
+                    if (node.right != null) {
+                        queue.add(node.right);
+                        tmp++;
+                    }
                 }
             }
-            curLevelNodeNum = tmp;
-            if (curLevelNodeNum < expectNextLevelNodeNum) {
-            }
+
+            currentLevelNodeNum = tmp;
+            expectCurrentLevelNodeNum *= 2;
         }
 
-        return false;
+        return true;
     }
 }
