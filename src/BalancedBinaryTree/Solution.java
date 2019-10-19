@@ -43,4 +43,12 @@ class Solution {
 
         return root.val;
     }
+
+    public int getDepth(TreeNode node) {
+        if (node == null) {
+            return 0;
+        } else {
+            return node.val;
+        }
+    }
 }
