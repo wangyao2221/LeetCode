@@ -2,50 +2,45 @@ package BalancedBinaryTree;
 
 import common.TreeNode;
 
-import java.util.LinkedList;
-import java.util.Queue;
-
 class Solution {
     public boolean isBalanced(TreeNode root) {
-        if (root == null) {
+        depth(root);
+        return checkBalance(root);
+    }
+
+    public boolean checkBalance(TreeNode root) {
+        if (root == null || (root.left == null && root.right == null)) {
             return true;
         }
 
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-
-        int currentLevelNodeNum = 1;
-        int expectCurrentLevelNodeNum = currentLevelNodeNum;
-
-        int flag = 0;
-        while (!queue.isEmpty()) {
-            if (currentLevelNodeNum < expectCurrentLevelNodeNum && flag < 2) {
-                flag++;
-            }
-
-            if (flag == 2) {
+        if (root.left == null && root.right != null) {
+            if (root.right.val > 1) {
                 return false;
             }
-
-            int tmp = 0;
-            for (int i = 0; i < currentLevelNodeNum; i++) {
-                if (!queue.isEmpty()) {
-                    TreeNode node = queue.poll();
-                    if (node.left != null) {
-                        queue.add(node.left);
-                        tmp++;
-                    }
-                    if (node.right != null) {
-                        queue.add(node.right);
-                        tmp++;
-                    }
-                }
+        } else if (root.right == null && root.left != null) {
+            if (root.left.val > 1) {
+                return  false;
             }
-
-            currentLevelNodeNum = tmp;
-            expectCurrentLevelNodeNum *= 2;
+        } else if (Math.abs(root.left.val - root.right.val) > 1){
+            return false;
         }
 
-        return true;
+        boolean leftCheck = checkBalance(root.left);
+        boolean rightCheck = checkBalance(root.right);
+
+        return leftCheck && rightCheck;
+    }
+
+    public int depth(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+
+        int leftDepth = depth(root.left);
+        int rightDepth = depth(root.right);
+
+        root.val = Math.max(leftDepth, rightDepth) + 1;
+
+        return root.val;
     }
 }

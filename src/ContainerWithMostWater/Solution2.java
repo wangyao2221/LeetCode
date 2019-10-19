@@ -1,5 +1,10 @@
 package ContainerWithMostWater;
 
+/**
+ * 每次循环从高度更小的一侧开始找，因为容量是由高度小的一侧决定的
+ * 从高度大的一侧找无论怎么找都不可能让容量更大
+ * 下面left右移，right左移不用恢复的原因也是上面这个原因，高度大的一侧移动不可能让容量增大
+ */
 class Solution2 {
     public int maxArea(int[] height) {
         int max = 0;
