@@ -38,7 +38,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Test/Color.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Test/StaticColor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Test/Test.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Test/enumTest/Color.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Test/enumTest/Pizza.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Test/enumTest/StaticColor.java">
           <value>
             <set />
           </value>
@@ -49,6 +74,31 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/common/TreeUtil.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/api/common/controller/AlarmSubscribeController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/api/common/service/AlarmSubscribeService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/dao/IAlarmSubscribeDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/dao/impl/AlarmSubscribeDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/resources/cmdb/subscribe.xml">
           <value>
             <set />
           </value>
