@@ -13,6 +13,13 @@ import common.TreeNode;
  */
 class Solution {
     public boolean hasPathSum(TreeNode root, int sum) {
-        return false;
+        if (root == null) return false;
+
+        if (root.left == null && root.right == null) {
+            if (root.right.val == sum) return true;
+            else return false;
+        }
+
+        return hasPathSum(root.left,sum - root.val) || hasPathSum(root.right, sum - root.val);
     }
 }
