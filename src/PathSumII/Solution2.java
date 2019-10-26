@@ -13,11 +13,9 @@ import java.util.List;
  *     TreeNode right;
  *     TreeNode(int x) { val = x; }
  * }
- *
- * Runtime: 3 ms, faster than 13.53% of Java online submissions for Path Sum II.
- * Memory Usage: 37.9 MB, less than 100.00% of Java online submissions for Path Sum II.
+ * TODO 优化时间复杂度
  */
-class Solution {
+class Solution2 {
     public List<List<Integer>> pathSum(TreeNode root, int sum) {
         if (root == null) return new ArrayList<>();
 
@@ -41,13 +39,13 @@ class Solution {
 
         for (List<Integer> list : leftList) {
             list.add(0, root.val);
-            result.add(list);
         }
+        result.addAll(leftList);
 
         for (List<Integer> list : rightList) {
             list.add(0, root.val);
-            result.add(list);
         }
+        result.addAll(rightList);
 
         return result;
     }
