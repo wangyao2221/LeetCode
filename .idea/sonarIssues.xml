@@ -13,6 +13,26 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../EffectiveJava/src/com/wangyao2221/effectivejava/chapter1/pizzaBuilderDemo/Calzone.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EffectiveJava/src/com/wangyao2221/effectivejava/chapter1/pizzaBuilderDemo/NyPizza.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EffectiveJava/src/com/wangyao2221/effectivejava/chapter1/pizzaBuilderDemo/Pizza.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../EffectiveJava/src/com/wangyao2221/effectivejava/chapter1/pizzaBuilderDemo/Test.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/.idea/sonarIssues.xml">
           <value>
             <set />
@@ -149,6 +169,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/Test360/Test2.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/WeeklyContest160/FindPositiveIntegerSolutionforAGivenEquation/Solution.java">
           <value>
             <set />
           </value>
