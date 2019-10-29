@@ -93,6 +93,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/PathSumIII/Solution.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Test/Color.java">
           <value>
             <set />
@@ -193,6 +198,11 @@
             <set />
           </value>
         </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/api/cluster/controller/ClusterController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/api/common/controller/AlarmSubscribeController.java">
           <value>
             <set />
@@ -203,12 +213,22 @@
             <set />
           </value>
         </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/component/CacheManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/dao/IAlarmSubscribeDao.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/dao/impl/AlarmSubscribeDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/resources/application.properties">
           <value>
             <set />
           </value>
