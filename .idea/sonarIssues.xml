@@ -53,6 +53,21 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Concurrency/PrintInOrder/FooCAS.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Concurrency/PrintInOrder/FooLoop.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Concurrency/PrintInOrder/TestRunnable.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/ContainerWithMostWater/Solution.java">
           <value>
             <set />

@@ -27,7 +27,7 @@ class FooLoop {
         printThird.run();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         FooLoop foo = new FooLoop();
         Runnable printFirst = () -> {
             System.out.println(1);
@@ -41,12 +41,28 @@ class FooLoop {
             System.out.println(3);
         };
 
-        try {
-            foo.first(printFirst);
-            foo.second(printSecond);
-            foo.first(printThird);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        new Thread(() -> {
+            try {
+                foo.first(printFirst);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+
+        new Thread(() -> {
+            try {
+                foo.third(printThird);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
+
+        new Thread(() -> {
+            try {
+                foo.second(printSecond);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }).start();
     }
 }
