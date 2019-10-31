@@ -2,8 +2,7 @@ package PathSumIII;
 
 import common.TreeNode;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
 
 /**
  * Definition for a binary tree node.
@@ -15,41 +14,40 @@ import java.util.List;
  * }
  */
 class Solution {
-    public int pathSum(TreeNode root, int sum) {
+    // Complexity: 
+    // - Time: O(N), N is the node number of the tree
+    // - Space: O(h), h is the height of the tree
+    
+    int helper(TreeNode root, int sum, HashMap<Integer, Integer> prefixSum, int currentSum) {
         if (root == null) return 0;
-
-        int result = 0;
-
-        if (root.left == null && root.right == null) {
-            if (root.val == sum) {
-                System.out.println("1 " + root.val);
-                return 1;
-            }
-            else return 0;
-        }
-
-        if (root.val == sum)  {
-            System.out.println("2 " + root.val);
-            return 1;
-        }
-
-        int leftSum = pathSum(root.left, sum - root.val) + pathSum(root.left, sum);
-        int rightSum = pathSum(root.right, sum - root.val) + pathSum(root.right, sum);
-
-        result = leftSum + rightSum + result;
-
-        List<List<String>> data = new ArrayList<>();
-
-//        List<String> data1 = new ArrayList<>();
-//        data1.add("广东省");
-//        data1.add("15");
-//        data.add(data1);
-//
-//        List<String> data2 = new ArrayList<>();
-//        data2.add("江西省");
-//        data2.add("15");
-//        data.add(data2);
-
-        return result;
+        
+        currentSum += root.val;
+        
+        // We need to count prefixSumX that currentSum - prefixSumX = sum
+        // => prefixSumX = currentSum - sum;
+        int cntPrefixSumX = prefixSum.getOrDefault(currentSum - sum, 0);
+        
+        // Put currentSum to prefixSum map
+        prefixSum.put(currentSum, prefixSum.getOrDefault(currentSum, 0) + 1);
+        
+        // Find answers from child nodes
+        int total = cntPrefixSumX 
+            + helper(root.left, sum, prefixSum, currentSum) 
+            + helper(root.right, sum, prefixSum, currentSum);
+        
+        // Backtracking
+        prefixSum.put(currentSum, prefixSum.getOrDefault(currentSum, 0) - 1);
+        
+        return total;
+    }
+    
+    public int pathSum(TreeNode root, int sum) {
+        HashMap<Integer, Integer> prefixSum = new HashMap<>();
+        
+        // Init prefixSum with 0
+        // For example: arr=[1, 5, 3] -> prefixSum = [0, 1, 6, 9]
+        prefixSum.put(0, 1);
+        
+        return helper(root, sum, prefixSum, 0);
     }
 }
