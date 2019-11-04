@@ -17,22 +17,27 @@ class Solution {
             arr2[i] = s2.charAt(i) - 'x';
         }
 
+        for (int i = 0; i < length - 1; i++) {
+            if (arr1[i] != arr2[i] && arr1[i] == arr2[i + 1] && arr1[i + 1] == arr2[i]) {
+                swap(arr1, arr2, i, i);
+                swap(arr1, arr2, i, i + 1);
+                result += 2;
+            } else if (arr1[i] != arr2[i] && arr1[i] == arr1[i + 1]) {
+                swap(arr1, arr2, i, i + 1);
+                result++;
+            } else if (true) {
+
+            } else if (true) {
+
+            }
+        }
+
         System.out.println(Arrays.toString(arr1));
         System.out.println(Arrays.toString(arr2));
 
-        for (int i = 0; i < length; ) {
+        for (int i = 0; i < length; i++) {
             if (arr1[i] != arr2[i]) {
-                for (int j = i; j < length; j++) {
-                    if (arr1[i] != arr2[j]) {
-                        swap(arr1, arr2, i, j);
-                        result++;
-                        break;
-                    }
-                }
-            }
-
-            if (arr1[i] == arr2[i]) {
-                i++;
+                return -1;
             }
         }
 
@@ -49,7 +54,7 @@ class Solution {
     public static void main(String[] args) {
         System.out.println(new Solution().minimumSwap("xx", "yy"));
         System.out.println(new Solution().minimumSwap("xy", "yx"));
-//        System.out.println(new Solution().minimumSwap("xx", "yx"));
+        System.out.println(new Solution().minimumSwap("xx", "yx"));
         System.out.println(new Solution().minimumSwap("xxyyxyxyxx", "xyyxyxxxyx"));
     }
 }
