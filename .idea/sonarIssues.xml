@@ -18,6 +18,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/consoles/db/b815b031-42dd-4daa-ac1b-9aad8bfb98b8/console_6.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../EffectiveJava/src/com/wangyao2221/effectivejava/chapter1/pizzaBuilderDemo/Calzone.java">
           <value>
             <set />
@@ -148,6 +153,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Test/FindSecondMaxNum.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Test/NewThreadTest.java">
           <value>
             <set />
@@ -208,12 +218,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/Test/findNMaxNum/FindNMaxNum.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Test/findNMaxNum/FindSecondMaxNum.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/Test/genericsTest/GenericsA.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/Test/genericsTest/List.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Test/sap/Main1.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/Test/sap/MaxSubStringLuckyNum.java">
           <value>
             <set />
           </value>
@@ -253,7 +283,27 @@
             <set />
           </value>
         </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/api/common/controller/CostController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/api/common/mapper/ProjectCostMapper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/api/common/service/AlarmSubscribeService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/api/common/service/CostService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/java/com/iqiyi/hadoop/api/hdfs/controller/HdfsController.java">
           <value>
             <set />
           </value>
@@ -279,6 +329,11 @@
           </value>
         </entry>
         <entry key="D:/work/hadoop-devops/hadoop-gateway/src/main/resources/cmdb/subscribe.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/work/hadoop-devops/hadoop-gateway/src/test/java/com/iqiyi/hadoop/api/common/service/CostServiceTest.java">
           <value>
             <set />
           </value>

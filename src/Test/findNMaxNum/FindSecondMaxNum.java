@@ -1,4 +1,6 @@
-package Test;
+package Test.findNMaxNum;
+
+import Test.Test;
 
 public class FindSecondMaxNum {
     public static void main(String[] args) {
