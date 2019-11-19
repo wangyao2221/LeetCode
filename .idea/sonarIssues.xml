@@ -128,6 +128,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/PlayWithChips/Solution.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/SplitAStringInBalancedStrings/Solution.java">
           <value>
             <set />
@@ -269,6 +274,21 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/WeeklyContest162/CellsWithOddValuesInAMatrix/Solution.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/WeeklyContest162/NumberOfClosedIslands/Solution.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/WeeklyContest162/ReconstructA2RowBinaryMatrix/Solution.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/WeeklyContest162/Solution.java">
           <value>
             <set />
           </value>
