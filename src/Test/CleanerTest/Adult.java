@@ -10,7 +10,7 @@ public class Adult {
 //            e.printStackTrace();
 //        }
 
-        Room room = new Room(99);
+//        Room room = new Room(99);
         System.out.println("Peace out");
     }
 }
