@@ -27,3 +27,13 @@ M
 src/iQiYiInterview/Test1.java,6\4\6483073f30725d204a4b09828230774f425efa26
 Q
 !src/iQiYiInterview/Singleton.java,4\e\4e690c68a8cb4acf5f69378a87918bcfcc5c8b0e
+\
+,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+D
+src/common/Node.java,4\e\4e60f87bdb2e67f379343a7d25aea226dd35e20a
+X
+(src/MaximumDepthOfNAryTree/Solution.java,5\d\5d58b9d639cb5f53a25abc465b4c3415b6081b0e
+Q
+!src/SumOfLeftLeaves/Solution.java,e\9\e909d8c3b2ffbd20420aaf3d370dad70c39349aa
