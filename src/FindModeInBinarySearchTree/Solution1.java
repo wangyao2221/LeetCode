@@ -17,7 +17,7 @@ import java.util.Map;
  * }
  * TODO 此解法不高效，尝试更高效的解法
  */
-class Solution {
+class Solution1 {
     int max = 0;
 
     public int[] findMode(TreeNode root) {
