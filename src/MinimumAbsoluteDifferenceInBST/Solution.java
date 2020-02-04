@@ -12,7 +12,7 @@ import common.TreeNode;
  * }
  */
 class Solution {
-    int min = Integer.MIN_VALUE;
+    int min = Integer.MAX_VALUE;
 
     public int getMinimumDifference(TreeNode root) {
         help(root, -1);
