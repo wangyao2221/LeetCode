@@ -37,3 +37,7 @@ X
 (src/MaximumDepthOfNAryTree/Solution.java,5\d\5d58b9d639cb5f53a25abc465b4c3415b6081b0e
 Q
 !src/SumOfLeftLeaves/Solution.java,e\9\e909d8c3b2ffbd20420aaf3d370dad70c39349aa
+]
+-src/FindModeInBinarySearchTree/Solution1.java,b\8\b8062d43ea9c48038cd6125af890a43b02766756
+]
+-src/FindModeInBinarySearchTree/Solution2.java,b\9\b92d51ee8ca8129454479e5cf5a94e5d06b6d9a8
