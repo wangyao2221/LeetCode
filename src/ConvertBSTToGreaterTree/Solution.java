@@ -14,7 +14,8 @@ import common.TreeNode;
 class Solution {
     int sum = 0;
     int pre = 0;
-    int originPre = -1;
+    int originPre = 0;
+    boolean start = false;
 
     public TreeNode convertBST(TreeNode root) {
         help(root);
@@ -26,16 +27,22 @@ class Solution {
             return;
         }
         help(root.right);
-        if (originPre != -1) {
+        if (start) {
             if (originPre > root.val) {
+                originPre = root.val;
                 root.val = root.val + sum;
                 pre = sum + root.val;
             } else if (originPre == root.val) {
+                originPre = root.val;
                 root.val = pre;
             }
-            sum = sum + root.val;
+            sum = sum + originPre;
+        } else {
+            originPre = root.val;
+            pre = root.val;
+            sum = root.val;
+            start = true;
         }
-        originPre = root.val;
         help(root.left);
     }
 }
