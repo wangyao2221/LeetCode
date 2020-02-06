@@ -1,22 +1,0 @@
-
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¶ÄÍ¦
-¨%squid:RedundantThrowsDeclarationCheck
-"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(³Š«É
-?squid:S11480"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-­%squid:RedundantThrowsDeclarationCheck"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(Ù¯ ûÿÿÿÿ
-N
-squid:S106%"9Replace this use of System.out or System.err by a logger.(€Ë²:
-]squid:S2142/"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
-?squid:S1148@"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-T
-squid:S106!"9Replace this use of System.out or System.err by a logger.(ìÑÑÈÿÿÿÿÿ
-?squid:S11488"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-]squid:S21427"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
-§%squid:RedundantThrowsDeclarationCheck"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú7
-T
-squid:S106)"9Replace this use of System.out or System.err by a logger.(Ç‚ş©ÿÿÿÿÿ
-]squid:S2142?"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
-­%squid:RedundantThrowsDeclarationCheck"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(ËÁ²şÿÿÿÿ
-Csquid:S1602 ",Remove useless curly braces around statement(€í¿ÿ
-Hsquid:S1602(",Remove useless curly braces around statement(÷ Ùğıÿÿÿÿ
-Hsquid:S1602$",Remove useless curly braces around statement(ï±‰’ûÿÿÿÿ
