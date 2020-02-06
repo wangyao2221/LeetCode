@@ -69,3 +69,16 @@ hs_err_pid*
 
 .gitignore
 .idea/workspace.xml
+!/.idea/
+.idea/ZeppelinRemoteNotebooks/
+.idea/sonarlint/issuestore/1/
+.idea/sonarlint/issuestore/4/9/
+.idea/sonarlint/issuestore/4/e/
+.idea/sonarlint/issuestore/5/d/
+.idea/sonarlint/issuestore/6/4/6483073f30725d204a4b09828230774f425efa26
+.idea/sonarlint/issuestore/9/
+.idea/sonarlint/issuestore/b/2/
+.idea/sonarlint/issuestore/b/8/
+.idea/sonarlint/issuestore/b/9/
+.idea/sonarlint/issuestore/e/
+src/WeeklyContest152/PrimeArrangements/
