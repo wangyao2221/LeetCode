@@ -6,16 +6,16 @@ import java.util.Map;
 
 class Solution {
     public int findJudge(int N, int[][] trust) {
-        int[] incommings = new int[N + 1];
+        int[] incomings = new int[N + 1];
         int[] outgoings = new int[N + 1];
 
         for (int[] edge : trust) {
-            incommings[edge[0]]++;
+            incomings[edge[0]]++;
             outgoings[edge[1]]++;
         }
 
-        for (int i = 1; i < incommings.length; i++) {
-            if (incommings[i] == 0 && outgoings[i] == N - 1) {
+        for (int i = 1; i < incomings.length; i++) {
+            if (incomings[i] == 0 && outgoings[i] == N - 1) {
                 return i;
             }
         }
