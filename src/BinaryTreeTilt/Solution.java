@@ -12,8 +12,11 @@ import common.TreeNode;
  * }
  */
 class Solution {
+    int result = 0;
+
     public int findTilt(TreeNode root) {
-        return 0;
+        findTilt(root);
+        return result;
     }
 
     public int help(TreeNode root) {
@@ -21,9 +24,11 @@ class Solution {
             return 0;
         }
 
-        int left = findTilt(root.left);
-        int right = findTilt(root.right);
+        int left = help(root.left);
+        int right = help(root.right);
 
-        return left + right + Math.abs(left - right);
+        result += Math.abs(left - right);
+
+        return left + right + root.val;
     }
 }
