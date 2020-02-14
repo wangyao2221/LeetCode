@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RebuildTree {
+    HashMap map = new HashMap();
     public TreeNode rebuild(int[] levelOrder, int[] midOrder) {
         TreeNode tree = null;
         if (levelOrder.length > 0) {
