@@ -9,7 +9,7 @@ import common.Node;
  * Next challenges:
  * TODO 优化
  */
-class Solution {
+class Solution1 {
     public Node cloneGraph(Node node) {
         if (node == null) {
             return null;
