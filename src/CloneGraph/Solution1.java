@@ -16,9 +16,9 @@ class Solution1 {
         }
 
         Node result = new Node();
-        Map<Integer, Node> nodeMap = new HashMap<>();
-        List<Integer> inQueue = new ArrayList<>();
-        Queue<Node> nodeQueue = new LinkedList<>();
+        HashMap<Integer, Node> nodeMap = new HashMap<Integer, Node>();
+        List<Integer> inQueue = new ArrayList<Integer>();
+        Queue<Node> nodeQueue = new LinkedList<Node>();
 
         nodeQueue.offer(node);
         result.val = node.val;
@@ -32,9 +32,7 @@ class Solution1 {
             if (nodeMap.containsKey(tmpNode.val)) {
                 tmpNewNode = nodeMap.get(tmpNode.val);
             } else {
-                tmpNewNode = new Node();
-                tmpNewNode.val = tmpNode.val;
-                tmpNewNode.neighbors = new ArrayList<>();
+                tmpNewNode = new Node(tmpNode.val, new ArrayList<Node>());
                 nodeMap.put(tmpNewNode.val, tmpNewNode);
             }
 
@@ -45,9 +43,7 @@ class Solution1 {
                 if (nodeMap.containsKey(neighbor.val)) {
                     newNeighbor = nodeMap.get(neighbor.val);
                 } else {
-                    newNeighbor = new Node();
-                    newNeighbor.val = neighbor.val;
-                    newNeighbor.neighbors = new ArrayList<>();
+                    newNeighbor = new Node(neighbor.val, new ArrayList<Node>());
                     nodeMap.put(newNeighbor.val, newNeighbor);
                 }
 
