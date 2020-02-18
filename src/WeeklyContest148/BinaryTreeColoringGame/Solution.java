@@ -1,10 +1,10 @@
 package WeeklyContest148.BinaryTreeColoringGame;
 
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 class Solution {
-    public boolean btreeGameWinningMove(TreeNode root, int n, int x) {
+    public boolean btreeGameWinningMove(BinaryTreeNode root, int n, int x) {
         if(root.val == x && root.left.left == null) return false;
 
         if (!find(root.left, x) && root.left.val == x) {
@@ -14,7 +14,7 @@ class Solution {
         }
     }
 
-    public boolean find(TreeNode root, int x) {
+    public boolean find(BinaryTreeNode root, int x) {
         if (root == null) return false;
 
         if (root.val == x) {

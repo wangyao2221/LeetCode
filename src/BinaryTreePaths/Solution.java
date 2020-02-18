@@ -1,14 +1,14 @@
 package BinaryTreePaths;
 
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 
 // TODO 优化
 class Solution {
-    public List<String> binaryTreePaths(TreeNode root) {
+    public List<String> binaryTreePaths(BinaryTreeNode root) {
         if (root == null) {
             return new ArrayList<>();
         }

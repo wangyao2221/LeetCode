@@ -1,6 +1,6 @@
 package ConvertBSTToGreaterTree;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 /**
  * Definition for a binary tree node.
@@ -17,12 +17,12 @@ class Solution {
     int originPre = 0;
     boolean start = false;
 
-    public TreeNode convertBST(TreeNode root) {
+    public BinaryTreeNode convertBST(BinaryTreeNode root) {
         help(root);
         return root;
     }
 
-    public void help(TreeNode root) {
+    public void help(BinaryTreeNode root) {
         if (root == null) {
             return;
         }

@@ -1,9 +1,9 @@
 package RangeSumBST;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 class Solution {
-    public int rangeSumBST(TreeNode root, int L, int R) {
+    public int rangeSumBST(BinaryTreeNode root, int L, int R) {
         if(root == null) return 0;
 
         int val = root.val;

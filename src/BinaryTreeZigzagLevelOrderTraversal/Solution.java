@@ -1,6 +1,6 @@
 package BinaryTreeZigzagLevelOrderTraversal;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -17,12 +17,12 @@ import java.util.Queue;
  * }
  */
 class Solution {
-    public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+    public List<List<Integer>> zigzagLevelOrder(BinaryTreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
 
         if(root == null) return result;
 
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<BinaryTreeNode> queue = new LinkedList<>();
         boolean flag = false;
         int curLen = 1;
 
@@ -32,7 +32,7 @@ class Solution {
             List<Integer> integerList = new ArrayList<>();
             int tmpLen = 0;
             for (int i = 0; i < curLen; i++) {
-                TreeNode node = queue.poll();
+                BinaryTreeNode node = queue.poll();
 
                 if (!flag) {
                     integerList.add(node.val);
@@ -40,8 +40,8 @@ class Solution {
                     integerList.add(0, node.val);
                 }
 
-                TreeNode left = node.left;
-                TreeNode right = node.right;
+                BinaryTreeNode left = node.left;
+                BinaryTreeNode right = node.right;
 
                 if (left != null) {
                     queue.add(left);
@@ -63,11 +63,11 @@ class Solution {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
-        root.left = new TreeNode(9);
-        root.right = new TreeNode(20);
-        root.right.left = new TreeNode(15);
-        root.right.right = new TreeNode(7);
+        BinaryTreeNode root = new BinaryTreeNode(3);
+        root.left = new BinaryTreeNode(9);
+        root.right = new BinaryTreeNode(20);
+        root.right.left = new BinaryTreeNode(15);
+        root.right.right = new BinaryTreeNode(7);
 
         List<List<Integer>> result = new Solution().zigzagLevelOrder(root);
 

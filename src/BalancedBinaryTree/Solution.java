@@ -1,14 +1,14 @@
 package BalancedBinaryTree;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 class Solution {
-    public boolean isBalanced(TreeNode root) {
+    public boolean isBalanced(BinaryTreeNode root) {
         depth(root);
         return checkBalance(root);
     }
 
-    public boolean checkBalance(TreeNode root) {
+    public boolean checkBalance(BinaryTreeNode root) {
         if (root == null || (root.left == null && root.right == null)) {
             return true;
         }
@@ -31,7 +31,7 @@ class Solution {
         return leftCheck && rightCheck;
     }
 
-    public int depth(TreeNode root) {
+    public int depth(BinaryTreeNode root) {
         if (root == null) {
             return 0;
         }
@@ -44,7 +44,7 @@ class Solution {
         return root.val;
     }
 
-    public int getDepth(TreeNode node) {
+    public int getDepth(BinaryTreeNode node) {
         if (node == null) {
             return 0;
         } else {

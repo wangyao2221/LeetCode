@@ -1,6 +1,6 @@
 package MinimumDepthOfBinaryTree;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 /**
  * Definition for a binary tree node.
@@ -15,7 +15,7 @@ import common.TreeNode;
  * Memory Usage: 38.2 MB, less than 98.44% of Java online submissions for Minimum Depth of Binary Tree.
  */
 class Solution {
-    public int minDepth(TreeNode root) {
+    public int minDepth(BinaryTreeNode root) {
         if (root == null) {
             return 0;
         }

@@ -1,6 +1,6 @@
 package WeeklyContest140.InsufficientNodesInRootToLeafPaths;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 /**
  * Definition for a binary tree node.
@@ -12,7 +12,7 @@ import common.TreeNode;
  * }
  */
 class Solution {
-    public TreeNode sufficientSubset(TreeNode root, int limit) {
+    public BinaryTreeNode sufficientSubset(BinaryTreeNode root, int limit) {
         return null;
     }
 

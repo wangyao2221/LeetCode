@@ -1,7 +1,7 @@
 package BinaryTreeInorderTraversal;
 
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,12 +9,12 @@ import java.util.List;
 class SolutionRecur {
     private List<Integer> result = new ArrayList<>();
 
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(BinaryTreeNode root) {
         inorder(root);
         return result;
     }
     
-    public void inorder(TreeNode root) {
+    public void inorder(BinaryTreeNode root) {
         if(root == null) return;
         inorder(root.left);
         result.add(root.val);

@@ -1,6 +1,6 @@
 package PathSumIII;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.HashMap;
 
@@ -18,7 +18,7 @@ class Solution {
     // - Time: O(N), N is the node number of the tree
     // - Space: O(h), h is the height of the tree
     
-    int helper(TreeNode root, int sum, HashMap<Integer, Integer> prefixSum, int currentSum) {
+    int helper(BinaryTreeNode root, int sum, HashMap<Integer, Integer> prefixSum, int currentSum) {
         if (root == null) return 0;
         
         currentSum += root.val;
@@ -41,7 +41,7 @@ class Solution {
         return total;
     }
     
-    public int pathSum(TreeNode root, int sum) {
+    public int pathSum(BinaryTreeNode root, int sum) {
         HashMap<Integer, Integer> prefixSum = new HashMap<>();
         
         // Init prefixSum with 0

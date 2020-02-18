@@ -1,13 +1,13 @@
 package SymmetricTree;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 class Solution {
-    public boolean isSymmetric(TreeNode root) {
+    public boolean isSymmetric(BinaryTreeNode root) {
         return isMirror(root, root);
     }
 
-    public boolean isMirror(TreeNode t1, TreeNode t2) {
+    public boolean isMirror(BinaryTreeNode t1, BinaryTreeNode t2) {
         if (t1 == null && t2 == null) return true;
         if (t1 == null || t2 == null) return false;
 

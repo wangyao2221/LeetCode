@@ -1,6 +1,6 @@
 package PathSumII;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
  * Memory Usage: 37.9 MB, less than 100.00% of Java online submissions for Path Sum II.
  */
 class Solution {
-    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+    public List<List<Integer>> pathSum(BinaryTreeNode root, int sum) {
         if (root == null) return new ArrayList<>();
 
         if (root.left == null && root.right == null) {

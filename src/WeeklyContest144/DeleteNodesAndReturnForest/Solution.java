@@ -1,9 +1,8 @@
 package WeeklyContest144.DeleteNodesAndReturnForest;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -16,9 +15,9 @@ import java.util.List;
  * }
  */
 class Solution {
-    List<TreeNode> result = new ArrayList<>();
+    List<BinaryTreeNode> result = new ArrayList<>();
 
-    public List<TreeNode> delNodes(TreeNode root, int[] to_delete) {
+    public List<BinaryTreeNode> delNodes(BinaryTreeNode root, int[] to_delete) {
         quickSort(to_delete, 0, to_delete.length - 1);
 
         if (!exist(to_delete, 0, to_delete.length - 1, root.val)) {
@@ -29,11 +28,11 @@ class Solution {
         return result;
     }
 
-    public void recur(TreeNode root, int[] to_delete) {
+    public void recur(BinaryTreeNode root, int[] to_delete) {
         if (root == null) return;
 
-        TreeNode left = root.left;
-        TreeNode right = root.right;
+        BinaryTreeNode left = root.left;
+        BinaryTreeNode right = root.right;
 
         if (exist(to_delete, 0, to_delete.length - 1, root.val)) {
             if (left != null && !exist(to_delete, 0, to_delete.length - 1, left.val)) {
@@ -118,14 +117,14 @@ class Solution {
 //        treeNode.right.left = new TreeNode(6);
 //        treeNode.right.right = new TreeNode(7);
 
-        TreeNode treeNode = new TreeNode(1);
-        treeNode.left = new TreeNode(2);
-        treeNode.right = new TreeNode(3);
+        BinaryTreeNode treeNode = new BinaryTreeNode(1);
+        treeNode.left = new BinaryTreeNode(2);
+        treeNode.right = new BinaryTreeNode(3);
 
         treeNode.left.left = null;
         treeNode.left.right = null;
         treeNode.right.left = null;
-        treeNode.right.right = new TreeNode(4);
+        treeNode.right.right = new BinaryTreeNode(4);
 
 //        System.out.println(solution.delNodes(treeNode,new int[]{3,5}));
         System.out.println(solution.delNodes(treeNode, new int[]{2, 1}));

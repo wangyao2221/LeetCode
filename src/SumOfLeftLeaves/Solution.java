@@ -1,14 +1,14 @@
 package SumOfLeftLeaves;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 // TODO 看其他人的解法
 class Solution {
-    public int sumOfLeftLeaves(TreeNode root) {
+    public int sumOfLeftLeaves(BinaryTreeNode root) {
         return sumOfLeftLeaves(root, false);
     }
 
-    public int sumOfLeftLeaves(TreeNode root, boolean isLeft) {
+    public int sumOfLeftLeaves(BinaryTreeNode root, boolean isLeft) {
         if (root == null) {
             return 0;
         }

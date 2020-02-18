@@ -1,10 +1,10 @@
 package LowestCommonAncestorOfABinarySearchTree;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 // TODO 内存消耗太大，改成非递归
 class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public BinaryTreeNode lowestCommonAncestor(BinaryTreeNode root, BinaryTreeNode p, BinaryTreeNode q) {
         if (root == null) return null;
         if (root == p || root == q) {
             return root;

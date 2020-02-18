@@ -1,18 +1,18 @@
 package BinaryTreeInorderTraversal;
 
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
 class Solution {
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> inorderTraversal(BinaryTreeNode root) {
         List<Integer> result = new ArrayList<>();
-        Stack<TreeNode> stack = new Stack<>();
+        Stack<BinaryTreeNode> stack = new Stack<>();
 
-        TreeNode node = root;
+        BinaryTreeNode node = root;
 
         do {
             stack.push(node);
@@ -21,7 +21,7 @@ class Solution {
                 node = node.left;
             } else {
                 stack.pop();
-                TreeNode tmp = stack.peek();
+                BinaryTreeNode tmp = stack.peek();
                 result.add(tmp.val);
                 stack.push(node.right);
                 node = node.right;

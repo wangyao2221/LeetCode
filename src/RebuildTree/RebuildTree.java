@@ -1,16 +1,16 @@
 package RebuildTree;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class RebuildTree {
     HashMap map = new HashMap();
-    public TreeNode rebuild(int[] levelOrder, int[] midOrder) {
-        TreeNode tree = null;
+    public BinaryTreeNode rebuild(int[] levelOrder, int[] midOrder) {
+        BinaryTreeNode tree = null;
         if (levelOrder.length > 0) {
-            tree = new TreeNode(levelOrder[0]);
+            tree = new BinaryTreeNode(levelOrder[0]);
         }
 
         Map<Integer, Integer> midOrderIndex = new HashMap<>();
@@ -20,18 +20,18 @@ public class RebuildTree {
         }
 
         for (int i = 1; i < levelOrder.length; i++) {
-            TreeNode tmp = tree;
+            BinaryTreeNode tmp = tree;
             while (tmp != null) {
-                TreeNode left = tmp.left;
-                TreeNode right = tmp.right;
+                BinaryTreeNode left = tmp.left;
+                BinaryTreeNode right = tmp.right;
                 if (midOrderIndex.get(levelOrder[i]) < midOrderIndex.get(tmp.val)) {
                     if (left == null) {
-                        tmp.left = new TreeNode(levelOrder[i]);
+                        tmp.left = new BinaryTreeNode(levelOrder[i]);
                     }
                     tmp = left;
                 } else {
                     if (right == null) {
-                        tmp.right = new TreeNode(levelOrder[i]);
+                        tmp.right = new BinaryTreeNode(levelOrder[i]);
                     }
                     tmp = right;
                 }
@@ -41,10 +41,10 @@ public class RebuildTree {
         return tree;
     }
 
-    public void levelOrder(TreeNode root) {
+    public void levelOrder(BinaryTreeNode root) {
     }
 
-    public void preOrder(TreeNode root) {
+    public void preOrder(BinaryTreeNode root) {
         if (root == null) {
             return;
         }
@@ -53,7 +53,7 @@ public class RebuildTree {
         preOrder(root.right);
     }
 
-    public void midOrder(TreeNode root) {
+    public void midOrder(BinaryTreeNode root) {
         if (root == null) {
             return;
         }
@@ -62,7 +62,7 @@ public class RebuildTree {
         midOrder(root.right);
     }
 
-    public void postOrder(TreeNode root) {
+    public void postOrder(BinaryTreeNode root) {
         if (root == null) {
             return;
         }
@@ -79,7 +79,7 @@ public class RebuildTree {
 //        int[] midOrder = {4, 2, 1, 6, 3, 7};
         int[] midOrder = {1, 6, 3, 7};
 //        TreeNode tree = main.rebuildFromLevelOrderAndMidOrder(preOrder, midOrder);
-        TreeNode tree = main.rebuild(preOrder, midOrder);
+        BinaryTreeNode tree = main.rebuild(preOrder, midOrder);
         main.preOrder(tree);
         System.out.println();
         main.midOrder(tree);

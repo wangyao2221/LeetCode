@@ -1,11 +1,11 @@
 package BinaryTreeLevelOrderTraversalII;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.*;
 
 class SolutionBFS {
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+    public List<List<Integer>> levelOrderBottom(BinaryTreeNode root) {
         List<List<Integer>> result = new LinkedList<>();
         Queue<TreeNodeWithDept> queue = new LinkedList<>();
         Stack<TreeNodeWithDept> stack = new Stack<>();
@@ -15,8 +15,8 @@ class SolutionBFS {
 
         while (!queue.isEmpty()) {
             TreeNodeWithDept node = queue.poll();
-            TreeNode left = node.node.left;
-            TreeNode right = node.node.right;
+            BinaryTreeNode left = node.node.left;
+            BinaryTreeNode right = node.node.right;
 
             if (left != null) {
                 stack.push(new TreeNodeWithDept(left, node.dept + 1));
@@ -53,10 +53,10 @@ class SolutionBFS {
     }
 
     public class TreeNodeWithDept {
-        TreeNode node;
+        BinaryTreeNode node;
         int dept;
 
-        public TreeNodeWithDept(TreeNode node, int dept) {
+        public TreeNodeWithDept(BinaryTreeNode node, int dept) {
             this.node = node;
             this.dept = dept;
         }

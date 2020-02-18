@@ -1,6 +1,6 @@
 package PathSumII;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.List;
  * TODO 优化时间复杂度
  */
 class Solution2 {
-    public List<List<Integer>> pathSum(TreeNode root, int sum) {
+    public List<List<Integer>> pathSum(BinaryTreeNode root, int sum) {
         if (root == null) return new ArrayList<>();
 
         if (root.left == null && root.right == null) {

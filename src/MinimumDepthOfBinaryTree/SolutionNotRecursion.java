@@ -1,6 +1,6 @@
 package MinimumDepthOfBinaryTree;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -18,8 +18,8 @@ import java.util.Queue;
  * Memory Usage: 38.4 MB, less than 98.44% of Java online submissions for Minimum Depth of Binary Tree.
  */
 class SolutionNotRecursion {
-    public int minDepth(TreeNode root) {
-        Queue<TreeNode> queue = new LinkedList<>();
+    public int minDepth(BinaryTreeNode root) {
+        Queue<BinaryTreeNode> queue = new LinkedList<>();
         int currentLevelLength = 0;
         int currentLevel = 0;
 
@@ -33,7 +33,7 @@ class SolutionNotRecursion {
             int tmp = 0;
 
             for (int i = 0; i < currentLevelLength; i++) {
-                TreeNode node = queue.poll();
+                BinaryTreeNode node = queue.poll();
 
                 if (node.left == null && node.right == null) {
                     return currentLevel;

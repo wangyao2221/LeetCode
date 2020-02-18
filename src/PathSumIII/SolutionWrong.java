@@ -1,6 +1,6 @@
 package PathSumIII;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,11 +17,11 @@ import java.util.List;
  * 3
  */
 class SolutionWrong {
-    public int pathSum(TreeNode root, int sum) {
+    public int pathSum(BinaryTreeNode root, int sum) {
         return pathSum(root, sum, sum);
     }
 
-    public int pathSum(TreeNode root, int sum, int originSum) {
+    public int pathSum(BinaryTreeNode root, int sum, int originSum) {
         if (root == null) return 0;
 
         int result = 0;

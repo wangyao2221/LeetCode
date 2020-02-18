@@ -1,6 +1,6 @@
 package FindModeInBinarySearchTree;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,7 +20,7 @@ import java.util.Map;
 class Solution1 {
     int max = 0;
 
-    public int[] findMode(TreeNode root) {
+    public int[] findMode(BinaryTreeNode root) {
         List<Integer> resultList = new ArrayList<>();
         Map<Integer, Integer> map = new HashMap<>();
         help(root, map);
@@ -36,7 +36,7 @@ class Solution1 {
         return result;
     }
 
-    public void help(TreeNode root, Map<Integer, Integer> map) {
+    public void help(BinaryTreeNode root, Map<Integer, Integer> map) {
         if (root == null) {
             return;
         }

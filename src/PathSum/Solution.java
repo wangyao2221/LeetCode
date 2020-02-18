@@ -1,6 +1,6 @@
 package PathSum;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 /**
  * Definition for a binary tree node.
@@ -12,7 +12,7 @@ import common.TreeNode;
  * }
  */
 class Solution {
-    public boolean hasPathSum(TreeNode root, int sum) {
+    public boolean hasPathSum(BinaryTreeNode root, int sum) {
         if (root == null) return false;
 
         if (root.left == null && root.right == null) {

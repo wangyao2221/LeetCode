@@ -1,15 +1,15 @@
 package MaximumDepthOfNAryTree;
 
-import common.Node;
+import common.TreeNode;
 
 class Solution {
-    public int maxDepth(Node root) {
+    public int maxDepth(TreeNode root) {
         if (root == null) {
             return 0;
         }
 
         int max = 0;
-        for (Node child : root.children) {
+        for (TreeNode child : root.children) {
             int depth = maxDepth(child);
             if (depth > max) {
                 max = depth;

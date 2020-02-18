@@ -1,6 +1,6 @@
 package BinaryTreeTilt;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 /**
  * Definition for a binary tree node.
@@ -14,12 +14,12 @@ import common.TreeNode;
 class Solution {
     int result = 0;
 
-    public int findTilt(TreeNode root) {
+    public int findTilt(BinaryTreeNode root) {
         findTilt(root);
         return result;
     }
 
-    public int help(TreeNode root) {
+    public int help(BinaryTreeNode root) {
         if (root == null) {
             return 0;
         }

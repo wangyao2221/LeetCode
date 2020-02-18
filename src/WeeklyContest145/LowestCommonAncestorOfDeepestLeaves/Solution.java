@@ -1,6 +1,6 @@
 package WeeklyContest145.LowestCommonAncestorOfDeepestLeaves;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 /**
  * Definition for a binary tree node.
@@ -12,15 +12,15 @@ import common.TreeNode;
  * }
  */
 class Solution {
-    private TreeNode result;
+    private BinaryTreeNode result;
     private boolean flag;
 
-    public TreeNode lcaDeepestLeaves(TreeNode root) {
+    public BinaryTreeNode lcaDeepestLeaves(BinaryTreeNode root) {
         cur(root);
         return result;
     }
 
-    public int cur(TreeNode root){
+    public int cur(BinaryTreeNode root){
         if (root == null) return 0;
 
         int left = cur(root.left);

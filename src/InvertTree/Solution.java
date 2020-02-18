@@ -1,13 +1,13 @@
 package InvertTree;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 class Solution {
-    public TreeNode invertTree(TreeNode root) {
+    public BinaryTreeNode invertTree(BinaryTreeNode root) {
         if (root == null) return root;
 
-        TreeNode left = root.left;
-        TreeNode right = root.right;
+        BinaryTreeNode left = root.left;
+        BinaryTreeNode right = root.right;
         root.left = invertTree(right);
         root.right = invertTree(left);
 

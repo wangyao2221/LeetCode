@@ -1,11 +1,19 @@
 package common;
 
+import java.util.List;
+
 public class TreeNode {
     public int val;
-    public TreeNode left;
-    public TreeNode right;
+    public List<TreeNode> children;
 
-    public TreeNode(int x) {
-        val = x;
+    public TreeNode() {}
+
+    public TreeNode(int _val) {
+        val = _val;
+    }
+
+    public TreeNode(int _val, List<TreeNode> _children) {
+        val = _val;
+        children = _children;
     }
 }

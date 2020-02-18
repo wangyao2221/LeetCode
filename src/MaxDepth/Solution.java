@@ -1,9 +1,9 @@
 package MaxDepth;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 class Solution {
-    public int maxDepth(TreeNode root) {
+    public int maxDepth(BinaryTreeNode root) {
         if (root == null) {
             return 0;
         }

@@ -1,6 +1,6 @@
 package iQiYiInterview;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -8,10 +8,10 @@ import java.util.List;
 import java.util.Queue;
 
 public class Test1 {
-    public static void print(TreeNode root) {
+    public static void print(BinaryTreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
 
-        Queue<TreeNode> queue = new LinkedList<>();
+        Queue<BinaryTreeNode> queue = new LinkedList<>();
         boolean flag = false;
         int curLen = 1;
 
@@ -21,7 +21,7 @@ public class Test1 {
             List<Integer> integerList = new ArrayList<>();
             int tmpLen = 0;
             for (int i = 0; i < curLen; i++) {
-                TreeNode node = queue.poll();
+                BinaryTreeNode node = queue.poll();
 
                 if (!flag) {
                     integerList.add(node.val);
@@ -29,8 +29,8 @@ public class Test1 {
                     integerList.add(0, node.val);
                 }
 
-                TreeNode left = node.left;
-                TreeNode right = node.right;
+                BinaryTreeNode left = node.left;
+                BinaryTreeNode right = node.right;
 
                 if (left != null) {
                     queue.add(left);
@@ -58,11 +58,11 @@ public class Test1 {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
-        root.left = new TreeNode(9);
-        root.right = new TreeNode(20);
-        root.right.left = new TreeNode(15);
-        root.right.right = new TreeNode(7);
+        BinaryTreeNode root = new BinaryTreeNode(3);
+        root.left = new BinaryTreeNode(9);
+        root.right = new BinaryTreeNode(20);
+        root.right.left = new BinaryTreeNode(15);
+        root.right.right = new BinaryTreeNode(7);
 
         print(root);
     }

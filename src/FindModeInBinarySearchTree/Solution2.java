@@ -1,11 +1,9 @@
 package FindModeInBinarySearchTree;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * 这个解法主要是根据题目意思进行中序遍历
@@ -17,9 +15,9 @@ import java.util.Map;
 class Solution2 {
     List<Integer> list = new ArrayList<>();
     int count = 0, max = 0;
-    TreeNode preNode = null;
+    BinaryTreeNode preNode = null;
 
-    public int[] findMode(TreeNode root) {
+    public int[] findMode(BinaryTreeNode root) {
         preNode = root;
         help(root);
         int[] result = new int[list.size()];
@@ -29,7 +27,7 @@ class Solution2 {
         return result;
     }
 
-    public void help(TreeNode root) {
+    public void help(BinaryTreeNode root) {
         if (root == null) {
             return;
         }

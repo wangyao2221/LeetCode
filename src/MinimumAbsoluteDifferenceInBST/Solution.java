@@ -1,6 +1,6 @@
 package MinimumAbsoluteDifferenceInBST;
 
-import common.TreeNode;
+import common.BinaryTreeNode;
 
 /**
  * 中序遍历可以将元素整理成一条有序的线
@@ -11,12 +11,12 @@ class Solution {
     int pre = -1;
     int min = Integer.MAX_VALUE;
 
-    public int getMinimumDifference(TreeNode root) {
+    public int getMinimumDifference(BinaryTreeNode root) {
         help(root);
         return min;
     }
 
-    public void help(TreeNode root) {
+    public void help(BinaryTreeNode root) {
         if (root == null) {
             return;
         }
