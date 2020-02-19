@@ -2,6 +2,10 @@ package CourseSchedule;
 
 import java.util.*;
 
+/**
+ * 发现一个问题，将图中有向边换个方向，在进行拓扑排序检测结果是一样的
+ * 也就是说是一个对偶问题？
+ */
 class Solution {
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         HashMap<Integer, List<Integer>> map = new HashMap<Integer, List<Integer>>();
@@ -10,8 +14,8 @@ class Solution {
 
         // 用map构造有向图
         for (int i = 0; i < prerequisites.length; i++) {
-            int in = prerequisites[i][0];
-            int out = prerequisites[i][1];
+            int out = prerequisites[i][0];
+            int in = prerequisites[i][1];
             if (!map.containsKey(in)) {
                 map.put(in, new ArrayList<Integer>());
             }
@@ -20,7 +24,7 @@ class Solution {
             inDegrees[out]++;
         }
 
-        // 找出第一轮入度为1的课程
+        // 找出第一轮入度为0的课程
         Queue<Integer> zeroInQueue = new LinkedList<Integer>();
         for (int i = 0; i < inDegrees.length; i++) {
             if (inDegrees[i] == 0) {
