@@ -1,6 +1,6 @@
 package CountServersThatCommunicate;
 
-// TODO 看一下这个解法
+// TODO 看一下这个解法 https://leetcode.com/problems/count-servers-that-communicate/discuss/480708/easy-understand
 class Solution {
     public int countServers(int[][] grid) {
         if (grid.length == 0) {
