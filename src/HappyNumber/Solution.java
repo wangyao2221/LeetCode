@@ -16,7 +16,9 @@ class Solution {
                 n += remainder * remainder;
                 tmpN /= 10;
             }
-            if(n == 1) return true;
+            if(n == 1) {
+                return true;
+            }
             if(!set.add(n)) return false;
         }
     }
