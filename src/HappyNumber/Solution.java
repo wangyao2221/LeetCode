@@ -19,7 +19,9 @@ class Solution {
             if(n == 1) {
                 return true;
             }
-            if(!set.add(n)) return false;
+            if(!set.add(n)) {
+                return false;
+            }
         }
     }
 }
