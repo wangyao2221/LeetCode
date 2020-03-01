@@ -3,7 +3,7 @@ package common.tree;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class Wrapper {
+public class Wrapper {
     /**
      * Definition for a binary tree node.
      * public class TreeNode {
@@ -14,9 +14,9 @@ class Wrapper {
      * }
      */
     public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
 
         TreeNode(int x) {
             val = x;
