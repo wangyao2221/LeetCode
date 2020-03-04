@@ -6,4 +6,4 @@ insert into cinema (id, movie, description, rating) values ('3', 'irish', 'borin
 insert into cinema (id, movie, description, rating) values ('4', 'Ice song', 'Fantacy', '8.6');
 insert into cinema (id, movie, description, rating) values ('5', 'House card', 'Interesting', '9.1');
 
-select id, movie, description, rating from cinema where description <> 'boring' and id % 2 = 1
+select id, movie, description, rating from cinema where description <> 'boring' and id % 2 = 1  order by rating desc
